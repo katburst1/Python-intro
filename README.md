@@ -62,7 +62,29 @@ astring = "Hello world!"
 <pre><code>print len(astring)</code></pre> prints the length of astring
 <pre><code>print astring.index("o")</code></pre> prints out 4, because the location of the first occurrence of the letter "o" is 4 characters away from the first character.
 <pre><code>print astring.count("l")</code></pre> counts the number of "l" in the string
+-----------------------------------------------
+<pre><code>
+	Instance variables are for data unique to each instance and class variables are for attributes and methods shared by all instances of the class:
+</code></pre>
+<pre><code>
+	class Dog:
 
+    kind = 'canine'         # class variable shared by all instances
+
+    def __init__(self, name):
+        self.name = name    # instance variable unique to each instance
+
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.kind                  # shared by all dogs
+'canine'
+>>> e.kind                  # shared by all dogs
+'canine'
+>>> d.name                  # unique to d
+'Fido'
+>>> e.name                  # unique to e
+'Buddy'
+</pre></code>
 --------------------------------------
 <h2>Python Frameworks</h2>
 [DJANGO](https://www.djangoproject.com/start/)
